@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'Inter-declarer-un-probleme',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./declarer-un-probleme.component.css']
 })
 export class DeclarerUnProblemeComponent implements OnInit {
+  declarerUnProblemeForm: any;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.declarerUnProblemeForm = this.fb.group({
+      Prenom: ['', [Validators.minLength(3)]]
+    });
   }
 
 }

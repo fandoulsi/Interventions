@@ -6,16 +6,18 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RouterModule } from '@angular/router';
 import { DeclarerUnProblemeComponent } from './declarer-un-probleme/declarer-un-probleme.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    DeclarerUnProblemeComponent
+    DeclarerUnProblemeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
