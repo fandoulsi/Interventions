@@ -13,7 +13,7 @@ export class DeclarerUnProblemeComponent implements OnInit {
 
   ngOnInit(): void {
     this.declarerUnProblemeForm = this.fb.group({
-      Prenom: ['', [Validators.minLength(3)]]
+      Prenom: ['', [Validators.minLength(3), , Validators.required]]
     });
   }
 
